@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 31 11:50:38 2017" VIVADOVERSION="2017.1">
+
+  <SYSTEMINFO ARCH="kintexu" DEVICE="xcku040" NAME="bd_c514" PACKAGE="ffva1156" SPEEDGRADE="-2"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="250000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_jtag" PORT="s_axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="External_Ports_s_axi_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_jtag" PORT="s_axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="4" NAME="S_AXI_araddr" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="S_AXI_arprot" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="S_AXI_arready" SIGIS="undef"/>
+    <PORT DIR="I" NAME="S_AXI_arvalid" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="4" NAME="S_AXI_awaddr" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="S_AXI_awprot" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="S_AXI_awready" SIGIS="undef"/>
+    <PORT DIR="I" NAME="S_AXI_awvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="S_AXI_bready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="S_AXI_bresp" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="S_AXI_bvalid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="31" NAME="S_AXI_rdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="S_AXI_rready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="S_AXI_rresp" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="S_AXI_rvalid" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="31" NAME="S_AXI_wdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="S_AXI_wready" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="3" NAME="S_AXI_wstrb" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="S_AXI_wvalid" SIGIS="undef"/>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_S_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+      <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ADDR_WIDTH" VALUE="16"/>
+      <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+      <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+      <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+      <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+      <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+      <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+      <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+      <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+      <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+      <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="PCIe_BRDG_BD_axi_pcie3_0_0_axi_aclk"/>
+      <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+      <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="ASSOCIATED_BUSIF" VALUE="S_AXI"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ARADDR" PHYSICAL="S_AXI_araddr"/>
+        <PORTMAP LOGICAL="ARPROT" PHYSICAL="S_AXI_arprot"/>
+        <PORTMAP LOGICAL="ARREADY" PHYSICAL="S_AXI_arready"/>
+        <PORTMAP LOGICAL="ARVALID" PHYSICAL="S_AXI_arvalid"/>
+        <PORTMAP LOGICAL="AWADDR" PHYSICAL="S_AXI_awaddr"/>
+        <PORTMAP LOGICAL="AWPROT" PHYSICAL="S_AXI_awprot"/>
+        <PORTMAP LOGICAL="AWREADY" PHYSICAL="S_AXI_awready"/>
+        <PORTMAP LOGICAL="AWVALID" PHYSICAL="S_AXI_awvalid"/>
+        <PORTMAP LOGICAL="BREADY" PHYSICAL="S_AXI_bready"/>
+        <PORTMAP LOGICAL="BRESP" PHYSICAL="S_AXI_bresp"/>
+        <PORTMAP LOGICAL="BVALID" PHYSICAL="S_AXI_bvalid"/>
+        <PORTMAP LOGICAL="RDATA" PHYSICAL="S_AXI_rdata"/>
+        <PORTMAP LOGICAL="RREADY" PHYSICAL="S_AXI_rready"/>
+        <PORTMAP LOGICAL="RRESP" PHYSICAL="S_AXI_rresp"/>
+        <PORTMAP LOGICAL="RVALID" PHYSICAL="S_AXI_rvalid"/>
+        <PORTMAP LOGICAL="WDATA" PHYSICAL="S_AXI_wdata"/>
+        <PORTMAP LOGICAL="WREADY" PHYSICAL="S_AXI_wready"/>
+        <PORTMAP LOGICAL="WSTRB" PHYSICAL="S_AXI_wstrb"/>
+        <PORTMAP LOGICAL="WVALID" PHYSICAL="S_AXI_wvalid"/>
+      </PORTMAPS>
+      <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" INSTANCE="axi_jtag" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="S_AXI" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi"/>
+      </MEMORYMAP>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="axi_jtag"/>
+      </PERIPHERALS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE FULLNAME="/axi_jtag" HWVERSION="1.0" INSTANCE="axi_jtag" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_jtag" VLNV="xilinx.com:ip:axi_jtag:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_TCK_CLOCK_RATIO" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_c514_axi_jtag_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0000FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="External_Ports_s_axi_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_awprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tck" SIGIS="undef" SIGNAME="axi_jtag_tck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bsip" PORT="tap_tck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tms" SIGIS="undef" SIGNAME="axi_jtag_tms">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bsip" PORT="tap_tms"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tdi" SIGIS="undef" SIGNAME="axi_jtag_tdi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bsip" PORT="tap_tdi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tdo" SIGIS="undef" SIGNAME="bsip_tap_tdo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bsip" PORT="tap_tdo"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_S_AXI" DATAWIDTH="32" NAME="s_axi" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="5"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="s_axi_arprot"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="s_axi_awprot"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/bsip" HWVERSION="1.1" INSTANCE="bsip" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bsip" VLNV="xilinx.com:ip:bsip:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_EN_MUX" VALUE="0"/>
+        <PARAMETER NAME="C_EN_MUX_EXT_BS" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SOFTBSCAN" VALUE="1"/>
+        <PARAMETER NAME="C_DEVICE_FAMILY" VALUE="0"/>
+        <PARAMETER NAME="C_IR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="C_CHIP_ID" VALUE="0"/>
+        <PARAMETER NAME="C_IR_ID_INSTR" VALUE="0"/>
+        <PARAMETER NAME="C_IR_USER1_INSTR" VALUE="0"/>
+        <PARAMETER NAME="C_USER_SCAN_CHAIN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_c514_bsip_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="drck" SIGIS="clk"/>
+        <PORT DIR="O" NAME="reset" SIGIS="rst"/>
+        <PORT DIR="O" NAME="sel" SIGIS="undef"/>
+        <PORT DIR="O" NAME="shift" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tdi" SIGIS="undef"/>
+        <PORT DIR="O" NAME="update" SIGIS="clk"/>
+        <PORT DIR="O" NAME="capture" SIGIS="undef"/>
+        <PORT DIR="O" NAME="runtest" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tck" SIGIS="clk"/>
+        <PORT DIR="O" NAME="tms" SIGIS="undef"/>
+        <PORT DIR="O" NAME="tap_tdo" SIGIS="undef" SIGNAME="bsip_tap_tdo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_jtag" PORT="tdo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tdo" SIGIS="undef"/>
+        <PORT DIR="I" NAME="tap_tdi" SIGIS="undef" SIGNAME="axi_jtag_tdi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_jtag" PORT="tdi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tap_tms" SIGIS="undef" SIGNAME="axi_jtag_tms">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_jtag" PORT="tms"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tap_tck" SIGIS="undef" SIGNAME="axi_jtag_tck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_jtag" PORT="tck"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_bscan" TYPE="INITIATOR" VLNV="xilinx.com:interface:bscan:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CAPTURE" PHYSICAL="capture"/>
+            <PORTMAP LOGICAL="DRCK" PHYSICAL="drck"/>
+            <PORTMAP LOGICAL="RESET" PHYSICAL="reset"/>
+            <PORTMAP LOGICAL="RUNTEST" PHYSICAL="runtest"/>
+            <PORTMAP LOGICAL="SEL" PHYSICAL="sel"/>
+            <PORTMAP LOGICAL="SHIFT" PHYSICAL="shift"/>
+            <PORTMAP LOGICAL="TCK" PHYSICAL="tck"/>
+            <PORTMAP LOGICAL="TDI" PHYSICAL="tdi"/>
+            <PORTMAP LOGICAL="TDO" PHYSICAL="tdo"/>
+            <PORTMAP LOGICAL="TMS" PHYSICAL="tms"/>
+            <PORTMAP LOGICAL="UPDATE" PHYSICAL="update"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="prim_bscan" TYPE="TARGET" VLNV="xilinx.com:interface:bscan:1.0">
+          <PORTMAPS/>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

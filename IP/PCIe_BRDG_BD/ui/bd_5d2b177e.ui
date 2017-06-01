@@ -1,0 +1,35 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port pci_express -pg 1 -y 400 -defaultsOSRD
+preplace port pcie_refclk -pg 1 -y 510 -defaultsOSRD
+preplace port axi_clk_out -pg 1 -y 470 -defaultsOSRD
+preplace port pcie_perstn -pg 1 -y 450 -defaultsOSRD
+preplace inst debug_bridge_0 -pg 1 -lvl 2 -y 110 -defaultsOSRD
+preplace inst axi_pcie3_0 -pg 1 -lvl 2 -y 470 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
+preplace inst axi_bram_ctrl_1_bram -pg 1 -lvl 3 -y 240 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 1 -y 150 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 2 -y 240 -defaultsOSRD -resize 220 100
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -y 520 -defaultsOSRD
+preplace netloc axi_mem_intercon_M01_AXI 1 1 1 500
+preplace netloc pcie_refclk_1 1 0 1 30J
+preplace netloc axi_pcie3_0_axi_aresetn 1 0 3 20 -10 510 30 900
+preplace netloc axi_mem_intercon_M00_AXI 1 1 1 490
+preplace netloc axi_pcie3_0_M_AXI 1 0 3 30J 310 NJ 310 890
+preplace netloc axi_mem_intercon_M02_AXI 1 1 1 490
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 1 500
+preplace netloc pcie_perstn_1 1 0 2 30J 460 500J
+preplace netloc axi_pcie3_0_pcie_7x_mgt 1 2 2 NJ 400 NJ
+preplace netloc axi_pcie3_0_axi_aclk 1 0 4 40 320 520 320 910 470 N
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 2 1 N
+preplace netloc axi_bram_ctrl_1_BRAM_PORTB 1 2 1 N
+preplace netloc util_ds_buf_0_IBUF_DS_ODIV2 1 1 1 520
+levelinfo -pg 1 0 340 710 1020 1150 -top -20 -bot 610
+",
+}
+{
+   da_axi4_cnt: "2",
+   da_board_cnt: "3",
+   da_bram_cntlr_cnt: "4",
+}
